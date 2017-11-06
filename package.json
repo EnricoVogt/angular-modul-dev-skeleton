@@ -1,0 +1,40 @@
+{
+  "name": "angular-modul-dev-skeleton",
+  "version": "1.0.0",
+  "description": "angularModulDevSkeleton",
+  "main": "dist/angularModulDevSkeleton.min.js",
+  "dependencies": {},
+  "devDependencies": {
+    "angular": "^1.6.4",
+    "angular-mocks": "^1.6.6",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "concurrently": "^3.5.0",
+    "copy-webpack-plugin": "^4.2.0",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.5",
+    "html-loader": "^0.5.1",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "node-sass": "^4.5.3",
+    "protractor": "^5.1.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  },
+  "scripts": {
+    "dev": "node_modules/.bin/webpack --env.dev && node_modules/.bin/webpack-dev-server --env.dev --colors --open --hot --content-base dist/",
+    "build": "node_modules/.bin/webpack --env.prod",
+    "unittest": "node_modules/.bin/webpack --env.prod && ./node_modules/karma/bin/karma start karma.conf.js",
+    "selenium": "node_modules/protractor/bin/webdriver-manager update && node_modules/protractor/bin/webdriver-manager start",
+    "e2etest": "node_modules/protractor/bin/protractor protractor.conf.js"
+  },
+  "keywords": [],
+  "author": "Enrico Vogt",
+  "license": "MIT"
+}
